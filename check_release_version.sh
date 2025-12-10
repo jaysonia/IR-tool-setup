@@ -32,6 +32,7 @@ if [ $? -eq 0 ]; then
   echo "---"
   echo "Downloading latest release"
   git clone --quiet -c advice.detachedHead=false https://github.com/wazuh/wazuh-docker.git -b $LATEST_TAG
+  cd wazuh-docker/single-node && docker compose -f generate-indexer-certs.yml run --rm generator
 else
   echo "Failed to get latest release."
 fi
