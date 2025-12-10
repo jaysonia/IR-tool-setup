@@ -1,3 +1,6 @@
 *.yml
 
 wazuh-docker
+cortex-docker
+misp-docker
+hive-docker
